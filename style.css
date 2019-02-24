@@ -1,0 +1,181 @@
+/* 共通の設定 //////////////////////////////////////////// */
+
+	/* 全ての要素に適用 */
+	*, *::before, *::after{
+        box-sizing: border-box;
+        word-wrap:break-word;
+      }
+    /* ウィンドウ背景色の設定 */
+    body{
+        width:100%;
+        color: #FFF;
+        background-color: #000;
+        font-family: "ＭＳ 明朝", "游明朝", serif;
+        font-weight: bold;
+    }
+    /* ユーティリティ */
+    .clearfix::after{
+        content: "";
+        display:block;
+        clear: both;
+    }
+    /* アニメーション */
+    .sa {
+        opacity: 0;
+        transition: transform 1.0s ease, opacity 1.0s ease;
+    }
+    .sa.show {
+        opacity: 1;
+        transform: none;
+    }
+    .sa--lr {
+        transform: translate(-100px, 0);
+    }
+    .sa--rl {
+        transform: translate(100px, 0);
+    }
+    .sa--up {
+        transform: translate(0, 100px);
+    }
+    .sa--down {
+        transform: translate(0, -100px);
+    }
+    .sa--scaleUp {
+        transform: scale(.5);
+    }
+    .sa--scaleDown {
+        transform: scale(1.5);
+    }
+    .sa--rotateL {
+        transform: rotate(180deg);
+    }
+    .sa--rotateR {
+        transform: rotate(-180deg);
+    }
+
+/* 個々の設定 ///////////////////////////////////////////// */
+    /* ラッパーの設定 */
+    #wrapper-all{
+        width:100%;
+        margin:0 auto;
+    }
+    /* ヘッダーの設定 */
+    #header{
+        width:100%;
+	}  
+    /* ページタイトルの設定　*/
+    #header h1{
+        display: none;
+	}
+	/* ナビの設定 */
+	.gnav{
+        position: fixed;
+        text-align: center;
+        vertical-align: bottom;
+        width: 1000px;
+        left:calc(50% - 1000px/2);
+        background-color: #000;
+        z-index: 10;
+	}
+    .gnav .nav-item{top:-20px;}
+	.gnav li{
+		position: relative;
+        display: inline-block;
+	}
+	.gnav li a{
+		display: block;
+        margin: 0 18px 0 0;
+		text-align: center;	
+    }
+    .gnav li:last-child a{margin-right: 20px;}
+    .gnav .goldline{
+        position: relative;
+        display: block;
+        margin: 0 auto;
+    }
+    /* メインビジュアル */
+    #main-visual .main-parts{
+        position: absolute;
+        width: 1000px;
+        top:96px;
+        left:calc(50% - 1000px/2);
+    }
+    #main-visual .wrapper{position: relative;}
+    #main-visual .main-background{
+        z-index: -12;
+        transition: all 2s ease;}
+    #main-visual .shadow{z-index: -11;}
+    #main-visual .plants{z-index: -10;}
+    #main-visual .dropshadow{z-index: -9;}
+    #main-visual .sayo{z-index: -8;}
+    #main-visual .ciel{z-index: -7;}
+    #main-visual .water{z-index: -6;}
+    #main-visual .water-bond{z-index: -5;}
+    #main-visual .main-feather{z-index: -4;}
+    #main-visual .flowers-front{z-index: -3;}
+    #main-visual .frame{z-index: -2;}
+    #main-visual .logo-main{z-index: -1;}
+    #main-visual .copy{z-index: -1;}
+    #main-visual .copy{
+        position: absolute;
+        top:290px;
+        left:calc(50% - 450px);
+    }
+    /* ニュース */
+    #news-area .wrapper{
+        position: relative;
+        width:1000px;
+        margin: 0 auto;
+        top:900px;
+    }
+    #news-area .column{
+        width: 50%;
+    }
+    #news-area .block{
+        width: 379px;
+        height: 550px;
+        margin: 0 0 80px 60px;
+    }
+    #news-area .news{
+        background-image: url("images/top/whatsnew-bg.png")
+    }
+    #news-area .twitter{
+        background-image: url("images/top/twitter-bg.png")
+    }
+    #news-area .twitter .window{
+        position: relative;
+        top:133px;
+        left:0px;
+    }
+    #news-area .TweetAuthor-name{
+        color: #fff;
+    }
+    /* 羽 */
+    #feather-area .feather{
+        position: absolute;
+        top:1740px;
+        left:calc(50% - 500px);
+        z-index: -1;
+    }
+    #feather-area .kirakira1{
+        position: absolute;
+        top: 1300px;
+        left: calc(50% - 1000px / 2);
+    }
+    #feather-area .kirakira2{
+        position: absolute;
+        top: 1895px;
+        left: 50.5%;
+    }
+
+    /* フッター */
+    #footer div{
+        position: relative;
+        top:950px;
+        height: 200px;
+    }
+    #footer img{
+        display: block;
+        position: relative;
+        margin: 0 auto;
+    }
