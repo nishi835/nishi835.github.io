@@ -1,0 +1,144 @@
+/* 共通の設定 //////////////////////////////////////////// */
+
+	/* 全ての要素に適用 */
+	*, *::before, *::after{
+        box-sizing: border-box;
+        word-wrap:break-word;
+      }
+    /* ウィンドウ背景色の設定 */
+    body{
+        width:100%;
+        height: 2900px;
+        color: #FFF;
+        background-color: #000;
+        font-family: "ＭＳ 明朝", "游明朝", serif;
+        font-weight: bold;
+    }
+    /* ユーティリティ */
+    .clearfix::after{
+        content: "";
+        display:block;
+        clear: both;
+    }
+    /* アニメーション */
+    .sa {
+        opacity: 0;
+        transition: transform 1.0s ease, opacity 1.0s ease;
+    }
+    .sa.show {
+        opacity: 1;
+        transform: none;
+    }
+    .sa--lr {
+        transform: translate(-100px, 0);
+    }
+    .sa--rl {
+        transform: translate(100px, 0);
+    }
+    .sa--up {
+        transform: translate(0, 100px);
+    }
+    .sa--down {
+        transform: translate(0, -100px);
+    }
+    .sa--scaleUp {
+        transform: scale(.5);
+    }
+    .sa--scaleDown {
+        transform: scale(1.5);
+    }
+    .sa--rotateL {
+        transform: rotate(180deg);
+    }
+    .sa--rotateR {
+        transform: rotate(-180deg);
+    }
+
+/* 個々の設定 ///////////////////////////////////////////// */
+    /* ラッパーの設定 */
+    #wrapper-all{
+        width:1000px;
+        height: 2100px;
+        margin:0 auto;
+        background-image: url("images/special/special.png");
+    }
+    /* ヘッダーの設定 */
+    #header{
+        width:100%;
+	}  
+    /* ページタイトルの設定　*/
+    #header h1{
+        display: none;
+	}
+	/* ナビの設定 */
+	.gnav{
+        position: fixed;
+        text-align: center;
+        vertical-align: bottom;
+        width: 1000px;
+        left:calc(50% - 1000px/2);
+        background-color: #000;
+        z-index: 10;
+        top:0px;
+	}
+    .gnav .nav-item{top:-20px;}
+	.gnav li{
+		position: relative;
+        display: inline-block;
+	}
+	.gnav li a{
+		display: block;
+        margin: 0 18px 0 0;
+		text-align: center;	
+    }
+    .gnav li:last-child a{margin-right: 20px;}
+    .gnav .goldline{
+        position: relative;
+        display: block;
+        margin: 0 auto;
+    }
+    /* メイン */
+    #main .wrapper{
+        width:86%;
+        position: relative;
+        margin: 0 auto;
+    }
+    #main .wrapper.main{
+        text-decoration: none;
+        top: 300px;
+    }
+    #main .wrapper a{
+        text-decoration: none;
+        display: block;
+        color: #fff;
+    }
+    #main .wrapper li{
+        list-style: none;
+        margin-top:20px;
+        text-align: center;
+    }
+    #main .banner{
+        margin-left: 5px;
+    }
+    #main .trial01 .link{
+        margin-left: 47px;
+    }
+    #main .trial02{
+        margin-top: 30px;
+    }
+    #main .banner:hover{
+        position: relative;
+        top: -2px;
+        left: 2px;
+        opacity: 0.8;
+    }
+    /* フッター */
+    #footer div{
+        position: relative;
+        top:750px;
+    }
+    #footer img{
+        display: block;
+        position: relative;
+        margin: 0 auto;
+    }
