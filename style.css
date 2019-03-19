@@ -123,10 +123,12 @@
     }
     /* ニュース */
     #news-area .wrapper{
-        position: relative;
+        position: absolute;
         width:1000px;
         margin: 0 auto;
         top:900px;
+        left:500px;
+        z-index: 1;
     }
     #news-area .column{
         width: 50%;
@@ -171,7 +173,7 @@
     /* フッター */
     #footer div{
         position: relative;
-        top:950px;
+        top:2200px;
         height: 200px;
     }
     #footer img{
